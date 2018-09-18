@@ -35,6 +35,6 @@ describe("Home", () => {
       container
     );
 
-    expect(component).to.not.be.false;
+    expect(component).not.toBe(false);
   });
 });
