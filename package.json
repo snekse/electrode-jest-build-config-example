@@ -30,6 +30,8 @@
     "npm": ">= 5"
   },
   "scripts": {
+    "cleanBuild": "rimraf lib && npm run build",
+    "hasLibTest": "test -e ./lib/client/components/home.spec.js && echo 'FAIL' || echo 'PASS'",
     "build": "clap build",
     "prod-start": "NODE_ENV=production clap -n -x electrode/build prod",
     "start": "if test \"$NODE_ENV\" = \"production\"; then npm run prod-start; else clap dev; fi",
